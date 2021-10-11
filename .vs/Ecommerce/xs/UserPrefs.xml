@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{0CF2F622-0FD4-4C92-B9E4-869E983F90ED}|Default">
+  <MonoDevelop.Ide.ItemProperties.Ecommerce PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Models/Category.cs">
+    <Files>
+      <File FileName="Ecommerce/Ecommerce.csproj" Line="8" Column="1" />
+      <File FileName="Ecommerce/Program.cs" Line="1" Column="1" />
+      <File FileName="Ecommerce/Startup.cs" Line="48" Column="1" />
+      <File FileName="Ecommerce/appsettings.json" Line="1" Column="22" />
+      <File FileName="Ecommerce/Properties/launchSettings.json" Line="29" Column="1" />
+      <File FileName="Ecommerce/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Ecommerce/Views/_ViewImports.cshtml" Line="1" Column="1" />
+      <File FileName="Ecommerce/Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="Ecommerce/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="Ecommerce/Models/Category.cs" Line="10" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Ecommerce" expanded="True">
+            <Node name="Ecommerce" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Category.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
