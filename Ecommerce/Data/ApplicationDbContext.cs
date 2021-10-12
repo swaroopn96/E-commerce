@@ -13,5 +13,7 @@ namespace Ecommerce.Data
 
         //This Category is the name of Table we want to create
         public DbSet<Category> Category { get; set; }
+
+        public DbSet<ApplicationType> ApplicationType { get; set; }
     }
 }
