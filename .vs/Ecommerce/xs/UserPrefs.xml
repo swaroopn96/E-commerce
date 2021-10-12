@@ -1,25 +1,27 @@
 ﻿<Properties StartupConfiguration="{0CF2F622-0FD4-4C92-B9E4-869E983F90ED}|Default">
-  <MonoDevelop.Ide.ItemProperties.Ecommerce PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Controllers/CategoryController.cs">
+  <MonoDevelop.Ide.ItemProperties.Ecommerce PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Views/Category/Edit.cshtml">
     <Files>
-      <File FileName="Ecommerce/Models/Category.cs" Line="17" Column="41" />
-      <File FileName="Ecommerce/Views/Category/Create.cshtml" Line="7" Column="75" />
-      <File FileName="Ecommerce/Controllers/CategoryController.cs" Line="43" Column="26" />
+      <File FileName="Ecommerce/Models/Category.cs" Line="20" Column="18" />
+      <File FileName="Ecommerce/Views/Category/Create.cshtml" Line="24" Column="23" />
+      <File FileName="Ecommerce/Controllers/CategoryController.cs" Line="59" Column="1" />
+      <File FileName="Ecommerce/Views/Category/Index.cshtml" Line="40" Column="42" />
+      <File FileName="Ecommerce/Views/Category/Edit.cshtml" Line="6" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Ecommerce" expanded="True">
             <Node name="Ecommerce" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="CategoryController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="ApplicationType" expanded="True" />
-                <Node name="Category" expanded="True" />
+                <Node name="Category" expanded="True">
+                  <Node name="Edit.cshtml" selected="True" />
+                </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
             </Node>
