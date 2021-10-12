@@ -40,9 +40,14 @@ namespace Ecommerce.Controllers
         [ValidateAntiForgeryToken] //It validates that the tocken is still valid and security is not tampered
         public IActionResult Create(Category obj)
         {
-            _db.Category.Add(obj);
-            _db.SaveChanges();//here it updates db
-            return RedirectToAction("Index");
+            //ModelState checks whether all the conditions specified are met
+            if (ModelState.IsValid)
+            {
+                _db.Category.Add(obj);
+                _db.SaveChanges();//here it updates db
+                return RedirectToAction("Index");
+            }
+            return View(obj);
         }
     }
 }
