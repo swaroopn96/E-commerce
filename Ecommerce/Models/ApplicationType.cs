@@ -12,6 +12,7 @@ namespace Ecommerce.Models
         [Key] //This key makes this Id primary and identity
         public int Id { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
     }

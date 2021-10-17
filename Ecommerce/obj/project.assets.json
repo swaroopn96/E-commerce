@@ -5809,7 +5809,7 @@
       "outputPath": "/Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/swaroopn/.nuget/NuGet/NuGet.Config"
+        "/Users/swaroopn/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5868,7 +5868,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
       }
     }
   }

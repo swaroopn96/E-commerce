@@ -44,5 +44,63 @@ namespace Ecommerce.Controllers
             _db.SaveChanges();//here it updates db
             return RedirectToAction("Index");
         }
+
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+                return NotFound();
+
+            var obj = _db.ApplicationType.Find(id);
+
+            if (obj == null)
+                return NotFound();
+
+            return View(obj);
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] //It validates that the tocken is still valid and security is not tampered
+        public IActionResult Edit(ApplicationType obj)
+        {
+            //ModelState checks whether all the conditions specified are met
+            if (ModelState.IsValid)
+            {
+                _db.ApplicationType.Update(obj);
+                _db.SaveChanges();//here it updates db
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+        }
+
+        //GET-DELETE
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+                return NotFound();
+
+            var obj = _db.ApplicationType.Find(id);
+
+            if (obj == null)
+                return NotFound();
+
+            return View(obj);
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] //It validates that the tocken is still valid and security is not tampered
+        public IActionResult DeletePost(int? id)
+        {
+            var obj = _db.ApplicationType.Find(id);
+
+            //ModelState checks whether all the conditions specified are met
+            if (obj == null)
+                return NotFound();
+
+            _db.ApplicationType.Remove(obj);
+            _db.SaveChanges();//here it updates db
+            return RedirectToAction("Index");
+        }
     }
 }

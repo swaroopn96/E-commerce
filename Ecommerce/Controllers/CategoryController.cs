@@ -78,5 +78,35 @@ namespace Ecommerce.Controllers
             return View(obj);
         }
 
+        //GET-DELETE
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+                return NotFound();
+
+            var obj = _db.Category.Find(id);
+
+            if (obj == null)
+                return NotFound();
+
+            return View(obj);
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] //It validates that the tocken is still valid and security is not tampered
+        public IActionResult DeletePost(int? id)
+        {
+            var obj = _db.Category.Find(id);
+
+            //ModelState checks whether all the conditions specified are met
+            if (obj == null)
+                return NotFound();
+          
+            _db.Category.Remove(obj);
+            _db.SaveChanges();//here it updates db
+            return RedirectToAction("Index");
+        }
+
     }
 }
