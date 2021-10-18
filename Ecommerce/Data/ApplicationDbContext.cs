@@ -15,5 +15,10 @@ namespace Ecommerce.Data
         public DbSet<Category> Category { get; set; }
 
         public DbSet<ApplicationType> ApplicationType { get; set; }
+
+        public DbSet<Products> Products { get; set; }
+
+
+
     }
 }
