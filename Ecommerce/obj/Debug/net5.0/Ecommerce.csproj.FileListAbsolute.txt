@@ -77,3 +77,5 @@
 /Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/obj/Debug/net5.0/Razor/Views/Category/Delete.cshtml.g.cs
 /Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/obj/Debug/net5.0/Razor/Views/ApplicationType/Delete.cshtml.g.cs
 /Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/obj/Debug/net5.0/Razor/Views/ApplicationType/Edit.cshtml.g.cs
+/Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/obj/Debug/net5.0/Razor/Views/Product/Index.cshtml.g.cs
+/Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/obj/Debug/net5.0/Razor/Views/Product/Upsert.cshtml.g.cs
