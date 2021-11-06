@@ -1,27 +1,20 @@
 ﻿<Properties StartupConfiguration="{0CF2F622-0FD4-4C92-B9E4-869E983F90ED}|Default">
   <MonoDevelop.Ide.ItemProperties.Ecommerce PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Models/ViewModels/ProductVM.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Views/Product/Delete.cshtml">
     <Files>
-      <File FileName="Ecommerce/Models/Category.cs" Line="8" Column="18" />
-      <File FileName="Ecommerce/Views/Category/Create.cshtml" />
-      <File FileName="Ecommerce/Controllers/CategoryController.cs" />
-      <File FileName="Ecommerce/Views/Category/Index.cshtml" />
-      <File FileName="Ecommerce/Views/ApplicationType/Index.cshtml" />
-      <File FileName="Ecommerce/Models/ApplicationType.cs" />
-      <File FileName="Ecommerce/Migrations/20211017190915_AddRequiredFields.cs" />
-      <File FileName="Ecommerce/Migrations/20211012165923_AddApplicationTypeToDatabase.cs" />
-      <File FileName="Ecommerce/Data/ApplicationDbContext.cs" />
-      <File FileName="Ecommerce/Migrations/ApplicationDbContextModelSnapshot.cs" />
-      <File FileName="Ecommerce/Migrations/20211011153230_addCategoryToDatabase.cs" />
-      <File FileName="Ecommerce/Models/ErrorViewModel.cs" />
-      <File FileName="Ecommerce/Models/Products.cs" />
-      <File FileName="Ecommerce/Migrations/20211017195238_AddProductsToDB.cs" />
-      <File FileName="Ecommerce/Controllers/ProductController.cs" Line="48" Column="37" />
-      <File FileName="Ecommerce/Views/Product/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Ecommerce/Views/Product/Upsert.cshtml" Line="60" Column="23" />
-      <File FileName="Ecommerce/Views/Category/Edit.cshtml" />
+      <File FileName="Ecommerce/Models/Products.cs" Line="28" Column="54" />
+      <File FileName="Ecommerce/Views/Product/Upsert.cshtml" Line="119" Column="20" />
       <File FileName="Ecommerce/Views/Shared/_Layout.cshtml" />
-      <File FileName="Ecommerce/Models/ViewModels/ProductVM.cs" Line="1" Column="1" />
+      <File FileName="Ecommerce/Controllers/ProductController.cs" Line="204" Column="10" />
+      <File FileName="Ecommerce/WebConstants.cs" />
+      <File FileName="Ecommerce/Startup.cs" />
+      <File FileName="Ecommerce/Models/ViewModels/ProductVM.cs" />
+      <File FileName="Ecommerce/Models/Category.cs" />
+      <File FileName="Ecommerce/Program.cs" />
+      <File FileName="Ecommerce/Data/ApplicationDbContext.cs" />
+      <File FileName="Ecommerce/appsettings.json" />
+      <File FileName="Ecommerce/Migrations/20211017195238_AddProductsToDB.cs" />
+      <File FileName="Ecommerce/Views/Product/Delete.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -32,17 +25,22 @@
               <Node name="Data" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True">
-                <Node name="ViewModels" expanded="True">
-                  <Node name="ProductVM.cs" selected="True" />
-                </Node>
+                <Node name="ViewModels" expanded="True" />
               </Node>
-              <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Category" expanded="True" />
-                <Node name="Product" expanded="True" />
+                <Node name="Product" expanded="True">
+                  <Node name="Delete.cshtml" selected="True" />
+                </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="images" expanded="True">
+                  <Node name="product" expanded="True" />
+                </Node>
+                <Node name="lib" expanded="True">
+                  <Node name="jquery-validation" expanded="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
