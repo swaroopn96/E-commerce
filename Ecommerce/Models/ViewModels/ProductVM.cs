@@ -14,5 +14,8 @@ namespace Ecommerce.Models.ViewModels
         public Products Product { get; set; }
 
         public IEnumerable<SelectListItem> CategorySelectList { get; set; }
+
+        public IEnumerable<SelectListItem> ApplicationTypeSelectList { get; set; }
+
     }
 }

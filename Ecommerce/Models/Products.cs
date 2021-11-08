@@ -28,5 +28,11 @@ namespace Ecommerce.Models
         //It adds foreign key i.e it creates relation between product and category table
         [ForeignKey("CategoryId")]
         public virtual Category Category { get; set; }
+
+        [Display(Name = "Application Type")]
+        public int ApplicationTypeId { get; set; }
+
+        [ForeignKey("ApplicationTypeId")]
+        public virtual ApplicationType ApplicationType { get; set; }
     }
 }

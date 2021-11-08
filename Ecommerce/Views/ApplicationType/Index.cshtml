@@ -2,6 +2,9 @@
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@{
+    ViewData["Title"] = "Application Type Page";
+}
 
 <div class="container p-3">
     <div class="row pt-4">
@@ -16,8 +19,8 @@
 
     </div>
     <br /><br />
-     @if(Model.Count()>0)
-     {
+    @if (Model.Count() > 0)
+    {
         <table class="table table-bordered table-striped" style="width:100%">
             <thead>
                 <tr>
@@ -28,25 +31,25 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach(var obj in Model)
+                @foreach (var obj in Model)
                 {
-                <tr>
-                    <td style="width:80%">@obj.Name</td>
-                    <td class="text-center">
-                        <a asp-controller="ApplicationType" asp-route-Id="@obj.Id" asp-action="Edit" class="btn btn-primary mx-2">
-                            <i class="fas fa-edit"></i>
-                        </a>
-                        <a asp-controller="ApplicationType" asp-route-Id="@obj.Id" asp-action="Delete" class="btn btn-danger mx-2">
-                            <i class="fas fa-trash-alt"></i>
-                        </a>
-                    </td>
-                </tr>
+                    <tr>
+                        <td style="width:80%">@obj.Name</td>
+                        <td class="text-center">
+                            <a asp-controller="ApplicationType" asp-route-Id="@obj.Id" asp-action="Edit" class="btn btn-primary mx-2">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a asp-controller="ApplicationType" asp-route-Id="@obj.Id" asp-action="Delete" class="btn btn-danger mx-2">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>
-     }
-     else
-     {
-         <p>No ApplicationType Exits</p>
-     }
+    }
+    else
+    {
+        <p>No ApplicationType Exits</p>
+    }
 </div>

@@ -34,12 +34,13 @@ namespace Ecommerce.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            IEnumerable<Products> productList = _db.Products;
+            IEnumerable<Products> productList = _db.Products.Include(x=>x.Category).Include(x=>x.ApplicationType);
 
-            foreach(var obj in productList)
-            {
-                obj.Category = _db.Category.FirstOrDefault(x => x.Id == obj.CategoryId);
-            }
+            //foreach(var obj in productList)
+            //{
+            //    obj.Category = _db.Category.FirstOrDefault(x => x.Id == obj.CategoryId);
+            //    obj.ApplicationType = _db.ApplicationType.FirstOrDefault(x => x.Id == obj.ApplicationTypeId);
+            //}
 
             return View(productList);
         }
@@ -82,6 +83,11 @@ namespace Ecommerce.Controllers
             {
                 Product = new Products(),
                 CategorySelectList = _db.Category.Select(x => new SelectListItem
+                {
+                    Text = x.Name,
+                    Value = x.Id.ToString()
+                }),
+                ApplicationTypeSelectList = _db.ApplicationType.Select(x => new SelectListItem
                 {
                     Text = x.Name,
                     Value = x.Id.ToString()
@@ -176,6 +182,11 @@ namespace Ecommerce.Controllers
                 Text = x.Name,
                 Value = x.Id.ToString()
             });
+            productVM.ApplicationTypeSelectList = _db.ApplicationType.Select(x => new SelectListItem
+            {
+                Text = x.Name,
+                Value = x.Id.ToString()
+            });
             return View(productVM);
         }
 
@@ -189,7 +200,7 @@ namespace Ecommerce.Controllers
             //product.Category = _db.Category.Find(product.Category.Id);
 
             //We can automatically include category while loading product(eager loading) using below code instead of above 2
-            Products product = _db.Products.Include(x=>x.Category).FirstOrDefault(x=>x.Id==id);
+            Products product = _db.Products.Include(x=>x.Category).Include(x=>x.ApplicationType).FirstOrDefault(x=>x.Id==id);
 
             if (product == null)
                 return NotFound();
