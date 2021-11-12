@@ -6,21 +6,32 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Ecommerce.Models;
+using Ecommerce.Data;
+using Ecommerce.Models.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,ApplicationDbContext db)
         {
             _logger = logger;
+            _db = db;
+
         }
 
         public IActionResult Index()
         {
-            return View();
+            HomeVM homeVM = new HomeVM()
+            {
+                Categories = _db.Category,
+                Products = _db.Products.Include(x => x.Category).Include(x => x.ApplicationType)
+            };
+            return View(homeVM);
         }
 
         public IActionResult Privacy()
