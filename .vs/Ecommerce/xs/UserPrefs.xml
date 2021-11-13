@@ -1,16 +1,18 @@
 ﻿<Properties StartupConfiguration="{0CF2F622-0FD4-4C92-B9E4-869E983F90ED}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.Ecommerce PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Migrations/20211109184532_AddShortDescToProductTable.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Views/Home/Details.cshtml">
     <Files>
-      <File FileName="Ecommerce/Views/Shared/_Layout.cshtml" Line="41" Column="51" />
-      <File FileName="Ecommerce/Models/Products.cs" Line="21" Column="28" />
-      <File FileName="Ecommerce/Views/Product/Upsert.cshtml" Line="33" Column="69" />
+      <File FileName="Ecommerce/Views/Shared/_Layout.cshtml" />
+      <File FileName="Ecommerce/Models/Products.cs" />
+      <File FileName="Ecommerce/Views/Product/Upsert.cshtml" />
       <File FileName="Ecommerce/Controllers/ProductController.cs" />
-      <File FileName="Ecommerce/Controllers/HomeController.cs" Line="29" Column="1" />
-      <File FileName="Ecommerce/Views/Shared/_IndividualProductCard.cshtml" Line="26" Column="19" />
+      <File FileName="Ecommerce/Controllers/HomeController.cs" />
+      <File FileName="Ecommerce/Views/Shared/_IndividualProductCard.cshtml" />
       <File FileName="Ecommerce/Views/Home/Index.cshtml" />
-      <File FileName="Ecommerce/Program.cs" Line="16" Column="1" />
-      <File FileName="Ecommerce/Migrations/20211109184532_AddShortDescToProductTable.cs" Line="1" Column="1" />
+      <File FileName="Ecommerce/Program.cs" />
+      <File FileName="Ecommerce/Migrations/20211109184532_AddShortDescToProductTable.cs" />
+      <File FileName="Ecommerce/Models/ViewModels/DetailsVM.cs" />
+      <File FileName="Ecommerce/Views/Home/Details.cshtml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,14 +21,14 @@
             <Node name="Ecommerce" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="20211109184532_AddShortDescToProductTable.cs" selected="True" />
-              </Node>
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="ViewModels" expanded="True" />
               </Node>
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
+                <Node name="Home" expanded="True">
+                  <Node name="Details.cshtml" selected="True" />
+                </Node>
                 <Node name="Product" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>

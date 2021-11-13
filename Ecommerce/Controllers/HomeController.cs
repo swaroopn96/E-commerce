@@ -34,6 +34,17 @@ namespace Ecommerce.Controllers
             return View(homeVM);
         }
 
+        public IActionResult Details(int id)
+        {
+            DetailsVM detailsVM = new DetailsVM()
+            {
+                Product = _db.Products.Include(x => x.Category).Include(x => x.ApplicationType).Where(x => x.Id == id)
+                .FirstOrDefault(),
+                ExistsInCart = false
+            };
+            return View(detailsVM);
+        }
+
         public IActionResult Privacy()
         {
             return View();
