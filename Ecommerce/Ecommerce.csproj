@@ -13,6 +13,7 @@
     <None Remove="Views\ApplicationType\" />
     <None Remove="Views\Product\" />
     <None Remove="Models\ViewModels\" />
+    <None Remove="Utility\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -22,6 +23,7 @@
     <Folder Include="Models\ViewModels\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\images\product\" />
+    <Folder Include="Utility\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />

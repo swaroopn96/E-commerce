@@ -31,8 +31,18 @@ namespace Ecommerce
                 Configuration.GetConnectionString("DefaultConnection")));
             //End
 
+            //To configure sessions
+            services.AddHttpContextAccessor();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            //End
+
             services.AddControllersWithViews();
-            //services.AddMvc().AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +64,10 @@ namespace Ecommerce
             app.UseRouting();
 
             app.UseAuthorization();
+
+            //To cofigure session in pipeline
+            app.UseSession();
+            //End
 
             app.UseEndpoints(endpoints =>
             {
