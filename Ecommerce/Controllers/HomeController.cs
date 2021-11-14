@@ -9,6 +9,7 @@ using Ecommerce.Models;
 using Ecommerce.Data;
 using Ecommerce.Models.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using Ecommerce.Utility;
 
 namespace Ecommerce.Controllers
 {
@@ -44,6 +45,21 @@ namespace Ecommerce.Controllers
             };
             return View(detailsVM);
         }
+
+        [HttpPost,ActionName("Details")]
+        public IActionResult DetailsPost(int id)
+        {
+            List<ShoppingCart> shoppingCartList = new List<ShoppingCart>();
+            if (HttpContext.Session.Get<IEnumerable<ShoppingCart>>(WebConstants.SessionCart) != null
+                && HttpContext.Session.Get<IEnumerable<ShoppingCart>>(WebConstants.SessionCart).Count() > 0) 
+            {
+                shoppingCartList = HttpContext.Session.Get<List<ShoppingCart>>(WebConstants.SessionCart);
+            }
+            shoppingCartList.Add(new ShoppingCart { ProductId = id });
+            HttpContext.Session.Set(WebConstants.SessionCart, shoppingCartList);
+            return RedirectToAction(nameof(Index)); //if we use name of we get intellisence and chances of error is avoided 
+        }
+
 
         public IActionResult Privacy()
         {
