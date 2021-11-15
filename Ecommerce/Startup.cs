@@ -6,6 +6,7 @@ using Ecommerce.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,6 +33,7 @@ namespace Ecommerce
             //End
 
             //To configure sessions
+            services.AddDistributedMemoryCache();
             services.AddHttpContextAccessor();
             services.AddSession(options =>
             {
@@ -41,6 +43,8 @@ namespace Ecommerce
             });
 
             //End
+            //For IdentityDBContext this is for default registration and login
+            services.AddIdentityCore<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddControllersWithViews();
         }
@@ -62,6 +66,8 @@ namespace Ecommerce
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
