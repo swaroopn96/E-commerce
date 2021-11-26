@@ -19,8 +19,9 @@ namespace Ecommerce.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("EcommerceIdentityDbContextConnection")));
 
-                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<EcommerceIdentityDbContext>();
+                //Commented since we added identity in main startup.cs other wise it throws exception as InvalidOperationException: Scheme already exists: Identity.Application
+                //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                //    .AddEntityFrameworkStores<EcommerceIdentityDbContext>();
             });
         }
     }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using Ecommerce.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -24,16 +25,22 @@ namespace Ecommerce.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
+        //Added role manager
+        private readonly RoleManager<IdentityRole> _roleManager;
+
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+
+            //Added role manager
+            _roleManager = roleManager;
         }
 
         [BindProperty]
@@ -60,10 +67,22 @@ namespace Ecommerce.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            //Added FullName and PhoneNumber
+            public string FullName { get; set; }
+
+            public string PhoneNumber { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
         {
+            //It checks if the admin role exists in DB
+            if(!await _roleManager.RoleExistsAsync(WebConstants.AdminRole))
+            {
+                await _roleManager.CreateAsync(new IdentityRole(WebConstants.AdminRole));
+                await _roleManager.CreateAsync(new IdentityRole(WebConstants.CustomerRole));
+            }
+
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
@@ -74,10 +93,20 @@ namespace Ecommerce.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
+                //Changed IdentityUser to Application user since it has full name
+                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email,
+                    PhoneNumber=Input.PhoneNumber ,FullName=Input.FullName};
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
-                {
+                {                    if (User.IsInRole(WebConstants.AdminRole))
+                    {
+                        await _userManager.AddToRoleAsync(user, WebConstants.AdminRole); //To register admin user
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, WebConstants.CustomerRole);
+                    }
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

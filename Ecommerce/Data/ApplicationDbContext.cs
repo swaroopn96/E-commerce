@@ -19,6 +19,8 @@ namespace Ecommerce.Data
 
         public DbSet<Products> Products { get; set; }
 
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
+
 
 
     }

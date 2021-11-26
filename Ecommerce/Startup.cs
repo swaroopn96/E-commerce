@@ -44,7 +44,14 @@ namespace Ecommerce
 
             //End
             //For IdentityDBContext this is for default registration and login
-            services.AddIdentityCore<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>();
+            //services.AddIdentityCore<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //Included IdentityRole
+            //AddDefaultTokenProviders provides token when password is forgotten
+            //AddDefaultUI for default UI pages 
+            services.AddIdentity<IdentityUser,IdentityRole>().AddDefaultTokenProviders()
+                .AddDefaultUI().AddEntityFrameworkStores<ApplicationDbContext>();
+
 
             services.AddControllersWithViews();
         }
@@ -77,6 +84,8 @@ namespace Ecommerce
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapRazorPages(); //Added because identity created pages are razor pages not mvc 
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

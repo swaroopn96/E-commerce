@@ -1,34 +1,53 @@
 ﻿<Properties StartupConfiguration="{0CF2F622-0FD4-4C92-B9E4-869E983F90ED}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.Ecommerce PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Migrations/20211114181542_scaffoldIdentityRazorClassLib.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Areas/Identity/Pages/Account/Register.cshtml">
     <Files>
-      <File FileName="Ecommerce/Data/ApplicationDbContext.cs" Line="11" Column="10" />
-      <File FileName="Ecommerce/Startup.cs" Line="70" Column="37" />
-      <File FileName="Ecommerce/obj/Debug/net5.0/Ecommerce.AssemblyInfo.cs" Line="13" Column="1" />
-      <File FileName="Ecommerce/Migrations/20211114181542_scaffoldIdentityRazorClassLib.cs" Line="1" Column="1" />
+      <File FileName="Ecommerce/Controllers/CategoryController.cs" Line="84" Column="33" />
+      <File FileName="Ecommerce/appsettings.json" Line="1" Column="1" />
+      <File FileName="Ecommerce/Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="Ecommerce/Views/_ViewImports.cshtml" Line="1" Column="1" />
+      <File FileName="Ecommerce/Views/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Ecommerce/Controllers/ProductController.cs" Line="1" Column="1" />
+      <File FileName="Ecommerce/Models/ViewModels/ShoppingCart.cs" Line="1" Column="1" />
+      <File FileName="Ecommerce/Views/Home/Details.cshtml" />
+      <File FileName="Ecommerce/Views/Home/Index.cshtml" />
+      <File FileName="Ecommerce/Views/Product/Index.cshtml" />
+      <File FileName="Ecommerce/Views/Product/Upsert.cshtml" />
+      <File FileName="Ecommerce/Models/ApplicationUser.cs" />
+      <File FileName="Ecommerce/Migrations/20211125190013_AddFullNameToUsersTable.cs" />
+      <File FileName="Ecommerce/WebConstants.cs" />
+      <File FileName="Ecommerce/Areas/Identity/Pages/Account/Register.cshtml" Line="46" Column="61" />
+      <File FileName="Ecommerce/Areas/Identity/Pages/Account/Register.cshtml.cs" Line="108" Column="92" />
+      <File FileName="Ecommerce/Startup.cs" Line="51" Column="32" />
+      <File FileName="Ecommerce/Views/Shared/_Layout.cshtml" Line="53" Column="69" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Ecommerce" expanded="True">
             <Node name="Ecommerce" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Data" expanded="True" />
+                  <Node name="Pages" expanded="True">
+                    <Node name="Account" expanded="True">
+                      <Node name="Register.cshtml" expanded="True" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="20211114181542_scaffoldIdentityRazorClassLib.cs" selected="True" />
-              </Node>
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="ViewModels" expanded="True" />
               </Node>
               <Node name="Utility" expanded="True" />
-              <Node name="Views" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Shared" expanded="True" />
+              </Node>
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="ClassPad">
-        <State name="__root__">
-          <Node name="Ecommerce" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
