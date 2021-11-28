@@ -12,6 +12,6 @@ namespace Ecommerce.Models.ViewModels
 
         public ApplicationUser ApplicationUser { get; set; }
 
-        public IEnumerable<Products> ProductList { get; set; }
+        public IList<Products> ProductList { get; set; }
     }
 }
