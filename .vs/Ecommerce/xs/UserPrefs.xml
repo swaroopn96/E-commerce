@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{0CF2F622-0FD4-4C92-B9E4-869E983F90ED}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.Ecommerce PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Views/Shared/_Layout.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Areas/Identity/Pages/Account/Register.cshtml.cs">
     <Files>
       <File FileName="Ecommerce/Controllers/CartController.cs" Line="116" Column="83" />
       <File FileName="Ecommerce/Views/Cart/InquiryConfirmation.cshtml" Line="7" Column="24" />
@@ -14,7 +14,8 @@
       <File FileName="Ecommerce/Controllers/ProductController.cs" Line="19" Column="5" />
       <File FileName="Ecommerce/Controllers/CategoryController.cs" Line="14" Column="5" />
       <File FileName="Ecommerce/Controllers/ApplicationTypeController.cs" Line="15" Column="1" />
-      <File FileName="Ecommerce/Views/Shared/_Layout.cshtml" Line="45" Column="27" />
+      <File FileName="Ecommerce/Views/Shared/_Layout.cshtml" Line="68" Column="26" />
+      <File FileName="Ecommerce/Areas/Identity/Pages/Account/Register.cshtml.cs" Line="13" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,7 +26,9 @@
                 <Node name="Identity" expanded="True">
                   <Node name="Pages" expanded="True">
                     <Node name="Account" expanded="True">
-                      <Node name="Register.cshtml" expanded="True" />
+                      <Node name="Register.cshtml" expanded="True">
+                        <Node name="Register.cshtml.cs" selected="True" />
+                      </Node>
                     </Node>
                   </Node>
                 </Node>
@@ -39,9 +42,7 @@
               <Node name="Views" expanded="True">
                 <Node name="Cart" expanded="True" />
                 <Node name="Product" expanded="True" />
-                <Node name="Shared" expanded="True">
-                  <Node name="_Layout.cshtml" selected="True" />
-                </Node>
+                <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="images" expanded="True" />

@@ -126,7 +126,15 @@ namespace Ecommerce.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        //Since while creating new account by admin it automatically logs with created account so to fix this
+                        if (!User.IsInRole("Admin"))
+                        {
+                            await _signInManager.SignInAsync(user, isPersistent: false);
+                        }
+                        else
+                        {
+                            return RedirectToAction(nameof(Index));
+                        }
                         return LocalRedirect(returnUrl);
                     }
                 }
