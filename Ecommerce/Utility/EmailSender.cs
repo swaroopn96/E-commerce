@@ -3,14 +3,19 @@ using System.Threading.Tasks;
 using Mailjet.Client;
 using Mailjet.Client.Resources;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
 
 namespace Ecommerce.Utility
 {
     public class EmailSender:IEmailSender
     {
-        public EmailSender()
+        private readonly IConfiguration _configuration;
+        public MailJetSettings _mailJetSettings { get; set; }
+
+        public EmailSender(IConfiguration configuration)
         {
+            _configuration = configuration;
         }
 
         //This method is called from the Register.cshtml.cs file
@@ -22,9 +27,11 @@ namespace Ecommerce.Utility
         public async Task Execute(string email, string subject, string body)
         {
 
+            _mailJetSettings = _configuration.GetSection("MailJet").Get<MailJetSettings>();
+
             //Copied from https://app.mailjet.com/auth/get_started/developer website
             // MailjetClient parameter keys copied from https://app.mailjet.com/account/api_keys
-            MailjetClient client = new MailjetClient("f8272ac3c2b7dfc02612a57c5769ec30", "8e7a0632ec4d2aaf50d167ee28446548");
+            MailjetClient client = new MailjetClient(_mailJetSettings.ApiKey, _mailJetSettings.SecretKey);
             
             MailjetRequest request = new MailjetRequest
             {

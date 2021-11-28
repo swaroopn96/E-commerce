@@ -1,22 +1,6 @@
 ﻿<Properties StartupConfiguration="{0CF2F622-0FD4-4C92-B9E4-869E983F90ED}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.Ecommerce PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Areas/Identity/Pages/Account/Register.cshtml.cs">
-    <Files>
-      <File FileName="Ecommerce/Areas/Identity/Pages/Account/Register.cshtml" Line="4" Column="53" IsPinned="True" />
-      <File FileName="Ecommerce/Utility/EmailSender.cs" Line="66" Column="1" IsPinned="True" />
-      <File FileName="Ecommerce/Views/Cart/Summary.cshtml" Line="40" Column="39" IsPinned="True" />
-      <File FileName="Ecommerce/Views/Home/Details.cshtml" IsPinned="True" />
-      <File FileName="Ecommerce/Controllers/CategoryController.cs" Line="104" Column="35" />
-      <File FileName="Ecommerce/appsettings.json" Line="1" Column="1" />
-      <File FileName="Ecommerce/Views/_ViewStart.cshtml" Line="1" Column="1" />
-      <File FileName="Ecommerce/Startup.cs" Line="70" Column="17" />
-      <File FileName="Ecommerce/Views/Shared/_Layout.cshtml" Line="60" Column="123" />
-      <File FileName="Ecommerce/Controllers/CartController.cs" Line="83" Column="50" />
-      <File FileName="Ecommerce/Views/Cart/Index.cshtml" Line="69" Column="58" />
-      <File FileName="Ecommerce/Models/ViewModels/ProductUserVM.cs" Line="13" Column="31" />
-      <File FileName="Ecommerce/Program.cs" Line="16" Column="1" />
-      <File FileName="Ecommerce/Areas/Identity/Pages/Account/Register.cshtml.cs" Line="142" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -26,9 +10,7 @@
                 <Node name="Identity" expanded="True">
                   <Node name="Pages" expanded="True">
                     <Node name="Account" expanded="True">
-                      <Node name="Register.cshtml" expanded="True">
-                        <Node name="Register.cshtml.cs" selected="True" />
-                      </Node>
+                      <Node name="Register.cshtml" expanded="True" />
                     </Node>
                   </Node>
                 </Node>
@@ -41,6 +23,7 @@
               <Node name="Utility" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Cart" expanded="True" />
+                <Node name="_ViewStart.cshtml" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -51,9 +34,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/Utility/EmailSender.cs" relfile="Ecommerce/Utility/EmailSender.cs" line="65" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
