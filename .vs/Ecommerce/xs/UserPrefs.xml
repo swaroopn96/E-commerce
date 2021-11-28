@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{0CF2F622-0FD4-4C92-B9E4-869E983F90ED}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.Ecommerce PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/WebConstants.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ecommerce/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="Ecommerce/Controllers/CartController.cs" Line="125" Column="18" />
+      <File FileName="Ecommerce/Controllers/CartController.cs" Line="116" Column="83" />
       <File FileName="Ecommerce/Views/Cart/InquiryConfirmation.cshtml" Line="7" Column="24" />
       <File FileName="Ecommerce/Views/Cart/Summary.cshtml" Line="70" Column="105" />
       <File FileName="Ecommerce/Models/ViewModels/ProductUserVM.cs" Line="15" Column="21" />
@@ -10,7 +10,11 @@
       <File FileName="Ecommerce/Models/ViewModels/HomeVM.cs" Line="1" Column="1" />
       <File FileName="Ecommerce/Models/ViewModels/ProductVM.cs" Line="1" Column="1" />
       <File FileName="Ecommerce/Views/Product/Upsert.cshtml" Line="96" Column="41" />
-      <File FileName="Ecommerce/WebConstants.cs" Line="16" Column="42" />
+      <File FileName="Ecommerce/WebConstants.cs" Line="16" Column="21" />
+      <File FileName="Ecommerce/Controllers/ProductController.cs" Line="19" Column="5" />
+      <File FileName="Ecommerce/Controllers/CategoryController.cs" Line="14" Column="5" />
+      <File FileName="Ecommerce/Controllers/ApplicationTypeController.cs" Line="15" Column="1" />
+      <File FileName="Ecommerce/Views/Shared/_Layout.cshtml" Line="45" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -35,11 +39,13 @@
               <Node name="Views" expanded="True">
                 <Node name="Cart" expanded="True" />
                 <Node name="Product" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="images" expanded="True" />
               </Node>
-              <Node name="WebConstants.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -42,6 +42,8 @@
                         </li>*@
 
                         @*Copied from https://getbootstrap.com/docs/4.5/components/navbar/*@
+                        @if (User.IsInRole("Admin"))
+                        {
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Content Management
@@ -63,6 +65,7 @@
 
                             </div>
                         </li>
+                        }
                         @*End*@
                         <li @*class="ml-auto"*@>  @*ml-auto moves content to end*@
                             @if(HttpContextAccessor.HttpContext.Session.Get<List<ShoppingCart>>(WebConstants.SessionCart)!=null)

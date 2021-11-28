@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Ecommerce.Data;
 using Ecommerce.Models;
 using Ecommerce.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,6 +16,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Controllers
 {
+    [Authorize(Roles =WebConstants.AdminRole)] //Restricting access to only admin
     public class ProductController : Controller
     {
         private readonly ApplicationDbContext _db;

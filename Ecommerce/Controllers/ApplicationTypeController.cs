@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Ecommerce.Data;
 using Ecommerce.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Ecommerce.Controllers
 {
+    [Authorize(Roles = WebConstants.AdminRole)] //Restricting access to only admin
     public class ApplicationTypeController : Controller
     {
         private readonly ApplicationDbContext _db;
