@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Ecommerce.Data;
+using Ecommerce.Utility;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,6 +34,9 @@ namespace Ecommerce
                 Configuration.GetConnectionString("DefaultConnection")));
             //End
 
+            //To configure Email Services
+            services.AddTransient<IEmailSender, EmailSender>();
+
             //To configure sessions
             services.AddDistributedMemoryCache();
             services.AddHttpContextAccessor();
@@ -51,7 +56,6 @@ namespace Ecommerce
             //AddDefaultUI for default UI pages 
             services.AddIdentity<IdentityUser,IdentityRole>().AddDefaultTokenProviders()
                 .AddDefaultUI().AddEntityFrameworkStores<ApplicationDbContext>();
-
 
             services.AddControllersWithViews();
         }
