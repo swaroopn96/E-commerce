@@ -19,6 +19,7 @@
     <None Remove="Microsoft.AspNetCore.Identity.UI" />
     <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
     <None Remove="Views\Cart\" />
+    <None Remove="Mailjet.Api" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -45,6 +46,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.21" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="Mailjet.Api" Version="2.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\images\" />

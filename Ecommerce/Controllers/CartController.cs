@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Ecommerce.Data;
 using Ecommerce.Models;
@@ -18,6 +19,9 @@ namespace Ecommerce.Controllers
     {
         private readonly ApplicationDbContext _db;
 
+        [BindProperty]
+        public ProductUserVM ProductUserVM { get; set; }
+
         public CartController(ApplicationDbContext db)
         {
             _db = db;
@@ -28,8 +32,8 @@ namespace Ecommerce.Controllers
         {
             List<ShoppingCart> shoppingCartList = new List<ShoppingCart>();
 
-            if(HttpContext.Session.Get<IEnumerable<ShoppingCart>>(WebConstants.SessionCart)!=null
-                && HttpContext.Session.Get<IEnumerable<ShoppingCart>>(WebConstants.SessionCart).Count()>0)
+            if (HttpContext.Session.Get<IEnumerable<ShoppingCart>>(WebConstants.SessionCart) != null
+                && HttpContext.Session.Get<IEnumerable<ShoppingCart>>(WebConstants.SessionCart).Count() > 0)
             {
                 shoppingCartList = HttpContext.Session.Get<List<ShoppingCart>>(WebConstants.SessionCart);
             }
@@ -40,6 +44,49 @@ namespace Ecommerce.Controllers
 
             return View(prodList);
         }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ActionName("Index")]
+        public IActionResult IndexPost()
+        {
+            return RedirectToAction(nameof(Summary));
+        }
+
+
+        
+        public IActionResult Summary()
+        {
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier); //if user logged in then claim has value else null
+
+            //Also we can use
+            //var userId = User.FindFirstValue(ClaimTypes.Name);
+
+            List<ShoppingCart> shoppingCartList = new List<ShoppingCart>();
+
+            if (HttpContext.Session.Get<IEnumerable<ShoppingCart>>(WebConstants.SessionCart) != null
+                && HttpContext.Session.Get<IEnumerable<ShoppingCart>>(WebConstants.SessionCart).Count() > 0)
+            {
+                shoppingCartList = HttpContext.Session.Get<List<ShoppingCart>>(WebConstants.SessionCart);
+            }
+
+            List<int> prodInCart = shoppingCartList.Select(x => x.ProductId).ToList();
+
+            IEnumerable<Products> prodList = _db.Products.Where(x => prodInCart.Contains(x.Id));
+
+            ProductUserVM = new ProductUserVM()
+            {
+                ApplicationUser = _db.ApplicationUser.FirstOrDefault(x => x.Id == claim.Value)
+            };
+            ProductUserVM.ProductList = prodList;
+
+            return View(ProductUserVM);
+
+        }
+
+
 
         public IActionResult Remove(int id)
         {

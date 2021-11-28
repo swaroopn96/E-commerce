@@ -488,3 +488,5 @@
 /Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/obj/Debug/net5.0/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs
 /Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/obj/Debug/net5.0/Razor/Views/Shared/_LoginPartial.cshtml.g.cs
 /Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/obj/Debug/net5.0/Razor/Views/Cart/Index.cshtml.g.cs
+/Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/obj/Debug/net5.0/Razor/Views/Cart/Summary.cshtml.g.cs
+/Users/swaroopn/Documents/Projects/Ecommerce/Ecommerce/bin/Debug/net5.0/Mailjet.Client.dll
